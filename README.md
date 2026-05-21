@@ -9,12 +9,12 @@ You must have MATLAB installed on your pc.
 
 Download the repository and unzip the file and move it to the folder where you created it.
 
-## Usage of ART
+## Folder Definitions
 Before starting the analyses, it is necessary to mention the folder definitions:
 
 *CODE* : The folder containing all the functions required for the calculations.
 
-*INPUT* : The folder containing the input data.
+*INPUT* : The folder containing the input data. Sample data is located under the *INPUT/\*/sample* folders.
 
   * *INPUT/NETCDF* : The folder containing the atmospheric parameter data in netcdf format downloaded from ECMWF.
   
@@ -38,3 +38,20 @@ Before starting the analyses, it is necessary to mention the folder definitions:
   run_parallel('AN20250801UT00STP006GRD1000RNG024.mat','stat.mat',[0:45:315],[3;3.3;4;5;7;10],4)
   ```
 
+## Usage of ART
+
+1. Copy or download netCDF file to the *INPUT/NETCDF/* folder. Work with data that has a small file size whenever possible. A global data set should be used and longitude of the data has to be range from 1 to 360 degree. For this reason, when downloading ECMWF data, enter the west-east range as 1 to 360 degree. We recommend using 1x1 degree data. The data must include *geopotential*, *specific humidity* and *temperature* parameters.
+2. We recommend naming the NETCDF files as follows:
+ 
+      `
+      type_yyyymmddUThhSTPxxxGRDxxxxRNGxxx.nc --> e.g. AN20250801UT00STP006GRD1000RNG024.nc
+      `
+      * *type* : two-character type of data, e.g. analysis (AN), forecast or ifs (FC), aifs (AI), era5 (E5).
+      * *yyyymmdd* : year-month-day.
+      * *UThh* : data start hour at UT.
+      * *STPxxx* : step intervals for the data at hours.
+      * *GRDxxxx* : resolution of the data. *GRD1000* is 1x1 degree, *GRD0250* is 0.25x0.25 degree, *GRD0125* is 0.125x0.125 degree resolution.
+      * *RNGxxx* : Range of the data. *RNG024* is 24-hour, *RNG360* is 360-hour data.
+3. Run the *readnetcdf.m* function in the *INPUT/NETCDF/* file path. This function creates a .mat file under the *INPUT/MAT/* folder.
+4. Run the *run.m* function in the main directory. If you want to use parallel processing, run the *run_parallel.m* function.
+5. The results are located in text files with the *".art"* extension under the *OUTPUT* folder.
