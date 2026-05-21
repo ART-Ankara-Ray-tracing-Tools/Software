@@ -1,0 +1,41 @@
+% Data columns:
+%    1  .... scannumber
+%    2  .... mjd
+%    3  .... year
+%    4  .... day of year
+%    5  .... hour
+%    6  .... min
+%    7  .... sec
+%    8  .... station
+%    9  .... azimuth in [rad]
+%    10 .... outgoing elevation angle (calculated, theoretical) in [rad]
+%    11 .... source
+%    12 .... temperature at station in [°C]
+%    13 .... pressure at station in [hPa]
+%    14 .... water vapour pressure at station in [hPa]
+%    15 .... zenith total delay in [m]
+%    16 .... zenith hydrostatic delay in [m]
+%    17 .... zenith wet delay in [m]
+%    18 .... slant total delay including geometric bending effect in [m]
+%    19 .... slant hydrostatic delay including geometric bending effect in [m]
+%    20 .... slant wet delay in [m]
+%    21 .... elevation angle at station in [rad]
+%    22 .... outgoing elevation angle from ray-tracing in [rad]
+%    23 .... geometric bending effect in [m]
+%    24 .... total mapping factor (includes treatment of geometric bending effect) [total_delay_along_the_path / total_zenith_delay]
+%    25 .... hydrostatic mapping factor (includes treatment of geometric bending effect) [hydrostatic_delay_along_the_path / hydrostatic_zenith_delay]
+%    26 .... wet mapping factor [wet_delay_along_the_path / wet_zenith_delay]
+%    27 .... temperature at the station position interpolated from the numerical weather model in [°C]
+%    28 .... pressure at the station position interpolated from the numerical weather model in [hPa]
+%    29 .... water vapour pressure at the station position interpolated from the numerical weather model in [hPa]
+%*****************************************************************************************************************
+%
+%
+%    1|          2|   3|  4| 5| 6|    7|       8|                   9|                  10|      11|    12|     13|    14|       15|       16|       17|       18|       19|       20|          21|          22|       23|        24|        25|        26|    27|     28|    29
+% scan|        mjd|year|doy| h| m|  sec| station|       azimuth [rad]|   calc. elev. [rad]|  source|T [°C]|p [hPa]|w[hPa]|  ztd [m]|  zhd [m]|  zwd [m]|  std [m]|  shd [m]|  swd [m]|e at st[rad]|e rtrd [rad]|bend. [m]|  total mf|  hydr. mf|    wet mf|T [°C]|p [hPa]|w[hPa]
+%
+     1 60888.00000 2025 213  0  0  0.00 ARTU        0.000000000000000    0.052359877559830 none        NaN     NaN    NaN    2.3744    2.2400    0.1344   35.0462   32.7695    2.2767    0.0572465    0.0523599    0.5369   14.75973   14.62892   16.93992  17.85  984.42  16.63
+     1 60888.00000 2025 213  0  0  0.00 BADG        0.000000000000000    0.052359877559830 none        NaN     NaN    NaN    2.2333    2.0693    0.1640   32.8549   30.2452    2.6097    0.0566279    0.0523599    0.4765   14.71166   14.61644   15.91324  17.93  909.55  12.29
+     1 60888.00000 2025 213  0  0  0.00 BAKO        0.000000000000000    0.052359877559830 none        NaN     NaN    NaN    2.5355    2.2701    0.2653   36.9959   33.0153    3.9806    0.0576355    0.0523599    0.6094   14.59146   14.54324   15.00408  25.79  994.47  24.97
+     1 60888.00000 2025 213  0  0  0.00 BHR4        0.000000000000000    0.052359877559830 none        NaN     NaN    NaN    2.4655    2.2664    0.1991   35.8989   32.8272    3.0717    0.0574579    0.0523599    0.5058   14.56040   14.48407   15.42933  38.86  993.51  26.53
+     1 60888.00000 2025 213  0  0  0.00 BOGT        0.000000000000000    0.052359877559830 none        NaN     NaN    NaN    1.8241    1.7215    0.1025   27.2727   25.2857    1.9870    0.0559986    0.0523599    0.3346   14.95167   14.68796   19.37931  14.35  753.63  10.52
