@@ -40,7 +40,7 @@ Before starting the analyses, it is necessary to mention the folder definitions:
 
 ## Usage of ART
 
-1. Copy or download netCDF file to the *INPUT/NETCDF/* folder. Work with data that has a small file size whenever possible. A global data set should be used and longitude of the data has to be range from 1 to 360 degree. For this reason, when downloading ECMWF data, enter the west-east range as 1 to 360 degree. We recommend using 1x1 degree data. The data must include *geopotential*, *specific humidity* and *temperature* parameters.
+1. Copy or download netCDF file to the *INPUT/NETCDF/* folder. Work with data that has a small file size whenever possible. A global data set should be used and longitude of the data has to be range from 1<sup>o</sup> to 360<sup>o</sup>. For this reason, when downloading ECMWF data, enter the west-east range as 1<sup>o</sup> to 360<sup>o</sup>. We recommend using 1x1 degree data. The data must include *geopotential*, *specific humidity* and *temperature* parameters.
 2. We recommend naming the NETCDF files as follows:
  
       `
