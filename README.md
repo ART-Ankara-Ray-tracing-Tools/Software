@@ -40,7 +40,7 @@ Before starting the analyses, it is necessary to mention the folder definitions:
 
 ## Usage of ART
 
-1. Copy or download netCDF file to the *INPUT/NETCDF/* folder. Work with data that has a small file size whenever possible. A global data set should be used and longitude of the data has to be range from 1<sup>o</sup> to 360<sup>o</sup>. For this reason, when downloading ECMWF data, enter the west-east range as 1<sup>o</sup> to 360<sup>o</sup>. We recommend using 1x1 degree data. The data must include *geopotential*, *specific humidity* and *temperature* parameters.
+1. Copy or download netCDF file to the *INPUT/NETCDF/* folder. Work with data that has a small file size whenever possible. A global data set should be used and longitude of the data has to be range from 1<sup>o</sup> to 360<sup>o</sup>. For this reason, when downloading ECMWF data, enter the west-east range as 1<sup>o</sup> to 360<sup>o</sup>. We recommend using 1<sup>o</sup> x 1<sup>o</sup> data. The data must include *geopotential*, *specific humidity* and *temperature* parameters.
 2. We recommend naming the NETCDF files as follows:
  
       `
@@ -50,7 +50,7 @@ Before starting the analyses, it is necessary to mention the folder definitions:
       * *yyyymmdd* : year-month-day.
       * *UThh* : data start hour at UT.
       * *STPxxx* : step intervals for the data at hours.
-      * *GRDxxxx* : resolution of the data. *GRD1000* is 1x1 degree, *GRD0250* is 0.25x0.25 degree, *GRD0125* is 0.125x0.125 degree resolution.
+      * *GRDxxxx* : resolution of the data. *GRD1000* is 1<sup>o</sup> x 1<sup>o</sup>, *GRD0250* is 0.25<sup>o</sup> x 0.25<sup>o</sup>, *GRD0125* is 0.125<sup>o</sup> x 0.125<sup>o</sup> resolution.
       * *RNGxxx* : Range of the data. *RNG024* is 24-hour, *RNG360* is 360-hour data.
 3. Run the *readnetcdf.m* function in the *INPUT/NETCDF/* file path. This function creates a .mat file under the *INPUT/MAT/* folder.
 4. Run the *run.m* function in the main directory. If you want to use parallel processing, run the *run_parallel.m* function.
